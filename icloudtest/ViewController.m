@@ -139,9 +139,11 @@
         cell.textLabel.text = aFile.iFilename;
     } else {
         if (aFile.iState == EStateDownloading) {
-            cell.textLabel.text = @"Downloading";
+            cell.textLabel.text = @"Downloading...";
         } else if (aFile.iState == EStateUploading) {
-            cell.textLabel.text = @"Uploading";
+            cell.textLabel.text = @"Uploading...";
+        } else {
+            cell.textLabel.text = @"Unkown state...";
         }
     }
     
